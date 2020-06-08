@@ -1,0 +1,28 @@
+
+h2{
+	text-align: center;
+}
+.tHead
+{
+	background-color: #f1c3c3;
+}
+
+
+.icon
+{
+	background-color: #ff6347;
+	padding: 10px;
+}
+
+.plusIcon
+{
+	float:right;
+}
+
+
+body
+{
+	
+	background-color: green;
+	background-image: linear-gradient(to right,#f8b195,#f67280);
+}

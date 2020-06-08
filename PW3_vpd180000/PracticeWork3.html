@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>J-Query TO DO LIST</title>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+
+
+
+
+	<style type="text/css">
+		.done{
+			text-decoration: line-through;
+
+		}
+		table {
+  			border-collapse: collapse;
+  			width: 20%;
+  			border: 1px solid #ddd;
+		}
+
+		th{
+  			text-align: left;
+  			padding: 8px;
+  			font-size: 25px;
+		}
+		td{
+  			text-align: center;
+  			padding: 8px;
+		}
+		#go{
+			float:right;
+		}
+
+		tr:nth-child(even) {background-color: #d3d3d3;}
+		tr:nth-child(odd) {background-color: #ffffff;}
+		body
+		{
+
+		  	background-color: blue; /* For browsers that do not support gradients */
+  			background-image: linear-gradient(-90deg, blue , white); /* Standard syntax (must be last) */
+		}
+		ul{
+			width: 20%;
+}
+
+
+li:nth-child(even) {background-color: #d3d3d3;}
+li:nth-child(odd) {background-color: #ffffff;}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script>
+
+		$(document).ready(function(){
+	//$("#add").click(function(){
+	//	var ntd = $("#newtodo").val();
+	//	console.log(ntd);
+	//	$("ul").append("<li>" +ntd +"</li>");
+	//	$("#newtodo").val("");
+	//	});
+
+
+		$("#newtodo").keypress(function(event){
+			if(event.which ==13){
+				var ntd = $("#newtodo").val();
+				console.log(ntd);
+				$("ul").append("<li>" +ntd +"</li>");
+				$("#newtodo").val("");
+
+			}
+		});
+
+		 $("li").hover(function() {
+        var trashIcon = $("<i class='fa fa-trash-o'></i>");
+
+        $(trashIcon).appendTo($(this)).stop();
+    }, function() {
+        $(trashIcon).hide();
+    });
+		 $(".fa-plus").click(function(){
+			$("input[type='text']").fadeToggle()
+		})
+});
+
+		
+			
+	
+
+
+	</script>
+</head>
+<body>
+	<div align="center">
+	<ul class="list-group">
+  	<li class="list-group-item active">To Do List &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-plus" id="go"></i></li>
+  	<li class="list-group-item"> <input type="text" id="newtodo" ></li> 
+  	<li class="list-group-item">Meet TA</li>
+  	<li class="list-group-item">Finish Assignment 1</li>
+	</ul>
+
+  </div>
+</body>
+</html>

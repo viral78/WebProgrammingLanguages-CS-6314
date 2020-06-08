@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery To Do List</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script> 
+		$(document).ready(function(){
+			
+			$("#newtodo").keypress(function(event){
+				if(event.which===13){
+					var newtodo = $("#newtodo").val();
+					console.log(newtodo);
+					$("#newtodo").val(" ")
+					$("ul").append("<li>"+ newtodo + "</li>");
+
+				}
+			});
+
+
+			 $("li").hover(function() { 
+                $('.fa-trash').show(); 
+            }, function() { 
+               $('.fa-trash').hide();
+            }); 
+
+
+
+		
+			$(".fa-plus").click(function(){
+				$("input[type='text']").fadeToggle()
+				});
+		
+			});
+	</script>
+	<link rel="stylesheet" href="homework.css">
+</head>
+<body>
+	<div align="center">
+	<ul class="list-group">
+  	<li class="list-group-item active">To Do List &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-plus" id="go"></i></li>
+  	<li class="list-group-item"> <input type="text" id="newtodo" ></li> 
+  	<li class="list-group-item"><i class="fa fa-trash"></i>Meet TA</li>
+  	<li class="list-group-item"><i class="fa fa-trash"></i>Finish Assignment 1</li>
+	</ul>
+
+  </div>
+</body>
+</html>

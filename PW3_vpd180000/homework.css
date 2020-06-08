@@ -1,0 +1,33 @@
+div.firstdiv {
+  width: 500px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: #F1C3C3;
+ };
+ 
+ .list-group{
+ 	text-align: center; 
+ }
+ .done{
+			text-decoration: line-through;
+		}
+
+ul{
+			width: 20%;
+}
+#go{
+			float:right;
+		}
+
+li:nth-child(even) {background-color: #d3d3d3;}
+li:nth-child(odd) {background-color: #ffffff;}
+body
+{
+
+		  	background-color: blue; /* For browsers that do not support gradients */
+  			background-image: linear-gradient(-90deg, blue , white); /* Standard syntax (must be last) */
+		}

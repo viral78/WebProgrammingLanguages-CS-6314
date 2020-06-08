@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+
+<link rel="stylesheet" href="todolist.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<title>JQuery - To do List</title>
+	<style type="text/css">
+		.done
+		{
+           text-decoration: line-through;
+		}
+	</style>
+	
+</head>
+<body>
+<h2>To Do List</h2>
+<!--<input type="text" name="" id="idNewTodo">
+<input type="button" name="" id ="btnAdd" value="Add">-->
+
+<!--<ul class="list-group">
+	<li class="list-group-item">Meet TAs</li>
+	<li class="list-group-item">Post Grades</li>
+	<li class="list-group-item">Grocery Sgopping</li>
+</ul>-->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+     
+    </div>
+    <div class="col-sm-4">
+      <table id="Todob" class="table table-striped" align="right">
+	<thead>
+    <tr>
+      <th class="tHead"  scope="col">To Do List <i id="bottonAdd" class="fa fa-plus plusIcon" ></th>
+    </tr>
+  </thead>
+  <tbody id="Todob">
+  	<tr id="newRow"><td><input type="text" name="" id="tblNew" size="41" placeholder="Add to do"></td></tr>
+
+  	<tr class="trHover"><td><i  class="fa fa-trash icon" style="display: none;"></i>Meet TA</td></tr>
+  	<tr class="trHover"><td><i  class="fa fa-trash icon" style="display: none;"></i>Finish Assignment</td></tr>
+  	<tr class="trHover"><td><i  class="fa fa-trash icon" style="display: none;"></i>Go to Walmart</td></tr>
+  </tbody>
+</table>
+    </div>
+    <div class="col-sm-4">
+     
+    </div>
+  </div>
+</div>
+
+<script src="index.js"></script>
+
+</body>
+</html>
